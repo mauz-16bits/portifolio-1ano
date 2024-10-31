@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atv 3</title>
+</head>
+<body>
+
+  <form id="beneficio">
+    <label for="salario">Salário:</label>
+    <input type="number" id="salario" name="salario" required>
+
+    <label for="du">Dias Úteis:</label>
+    <input type="number" id="du" name="du" required>
+
+    <label for="faltas">Faltas:</label>
+    <input type="number" id="faltas" name="faltas" required>
+
+    <label for="Filhos">Número de Filhos:</label>
+    <input type="number" id="Filhos" name="Filhos" required>
+
+    <label for="beneficios">Escolha o Benefício:</label>
+    <select id="beneficios" name="beneficios" required>
+        <option value="vale_refeicao">Vale Refeição</option>
+        <option value="vale_alimentacao">Vale Alimentação</option>
+        <option value="vale_transporte">Vale Transporte</option>
+        <option value="cesta_basica">Cesta Básica</option>
+        <option value="loas">LOAS</option>
+        <option value="fgts">FGTS</option>
+        <option value="salario_familia">Salário Família</option>
+    </select>
+
+    <button type="button" onclick="calcularBeneficios()">Calcular Benefício</button>
+</form>
+
+<h2 id="resultado"></h2>
+
+<script>
+    function calcularBeneficios() {
+        const salario = parseFloat(document.getElementById('salario').value);
+        const du = parseInt(document.getElementById('du').value);
+        const faltas = parseInt(document.getElementById('faltas').value);
+        const Filhos = parseInt(document.getElementById('Filhos').value);
+        const beneficios = document.getElementById('beneficios').value;
+        let resultado = 0;
+
+        switch(beneficios) {
+            case 'vale_refeicao':
+                resultado = (du - faltas) * (salario * 0.06);
+                break;
+            case 'vale_alimentacao':
+                resultado = du * 25;
+                break;
+            case 'vale_transporte':
+                resultado = salario * 0.06;
+                break;
+            case 'cesta_basica':
+                resultado = salario * 0.40;
+                break;
+            case 'loas':
+                resultado = 1412.00;
+                break;
+            case 'fgts':
+                resultado = salario * 0.08;
+                break;
+            case 'salario_familia':
+                if (salario < 1819.26) {
+                    resultado = Filhos * 62.04;
+                } else {
+                    resultado = 0;
+                }
+                break;
+        }
+
+        document.getElementById('resultado').innerText = 'Valor do Benefício: R$ ' + resultado.toFixed(2);
+    }
+</script>
+
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+<!-- EU NUNCA MAIS QUERO FAZER ISSO-->
+
+<!-- mds, que negocio fácil, como eu não consegui fazer isso em 4 minutos? '-' -->
+
+</body>
+</html>

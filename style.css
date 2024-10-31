@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Itim&display=swap');
+
+body {
+    font-family: "Itim", cursive;
+    background-color: aliceblue;
+    background: linear-gradient(45deg, #ff7eb3, #ff758c, #84fab0, #8fd3f4);
+    background-size: 600% 600%;
+    animation: gradiente 10s ease infinite;
+}
+
+@keyframes gradiente {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.itim-regular {
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.fotos {
+    border-style: solid;
+    border-color: black;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    padding: 20px;
+    margin-top: 2.5%;
+    background-color: white;
+}
+
+.table {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.bimestre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.maumau {
+    text-align: justify;
+}
+
+.title {
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    width: 150px;
+    background-color: white;
+}
+
+.box {
+    width: 150px;
+    height: 30px;
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+}
+.language {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background: linear-gradient(45deg, #ff7eb3, #ff758c, #84fab0, #8fd3f4);
+        background-size: 200% 200%;
+        background-attachment: fixed;
+        animation: gradientShift 10s ease infinite;
+    }
+    
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    .fotos {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 15px;
+        margin-top: 5%;
+    }
+    
+    .maumau {
+        position: relative;
+        margin: 5% auto;
+        scale: 90%;
+        max-height: none;
+    }
+    
+    .table {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .title, .box {
+        width: 100%;
+        max-width: 280px;
+    }
+}

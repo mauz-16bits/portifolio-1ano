@@ -1,0 +1,66 @@
+Elabore um fluxograma e algoritmo e javascript do seguinte exercício.
+
+lista 3
+
+Switch Case
+1- Receba 3 números e exiba as seguintes opções para o usuário escolher.
+a) Soma
+b) Subtração
+c) Divisão
+d) Exponenciação do 2º com o 3º.
+e) Multiplicação
+f) Sair
+Quando o usuário escoher faz a operação e volta para o menu.
+
+let opcao = 2;
+
+  switch (opcao) {
+    case 1:
+      console.log('Selecionada opção 1: Iniciar o jogo');
+      break;
+    case 2:
+      console.log('Selecionada opção 2: Configurações');
+      break;
+    case 3:
+      console.log('Selecionada opção 3: Sair do jogo');
+      break;
+    default:
+      console.log('Opção inválida');
+  }
+
+var day;
+switch (new Date().getDay()) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case 6:
+    day = "Saturday";
+    break;
+  default:
+    day = "Unknown Day";
+}
+
+
+2- Elabore um menu de vendas e peças de roupas, da maneira que desejar, incluindo peças femininas e masculinas, para cada compra a pessoa terá que escolher 2 peças no mínimo, após as escolhas exibir o total da compra junto com o nome e e-mail do comprador.
+
+
+
+--------------------------------------------------------------------------------------------
+
+
+

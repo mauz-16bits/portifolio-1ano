@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja do Markão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>Loja do Markão</h1>
+
+
+    <input type="checkbox" name="" id="peça1">Cámiza <br>
+    <input type="checkbox" name="" id="peça2">Cálsa <br>
+    <input type="checkbox" name="" id="peça3">Sáuto Áotu <br>
+    <input type="checkbox" name="" id="peça4">Bremúda Fóridâ <br>
+    <input type="checkbox" name="" id="peça5">Cámiza Rêgada <br>
+    <input type="checkbox" name="" id="peça6">Ternú de Bólhinhas <br>
+    <input type="checkbox" name="" id="peça7">Veztido de cazamemto <br>
+    <input type="checkbox" name="" id="peça8">Causinha de remda <br>
+
+    <button onclick="compra()">Comprar</button> <br>
+
+    <script>
+
+    var name, email;
+
+    name = prompt("Digite seu nome")
+    email = prompt("Digite seu email")
+
+    document.write("Olá, "+name+"!" +"<br>")
+    document.write("Você esta logado no email: "+email)
+
+    function compra() {
+        var lista = [document.getElementById("peça1").checked,
+        document.getElementById("peça2").checked,
+        document.getElementById("peça3").checked,
+        document.getElementById("peça4").checked,
+        document.getElementById("peça5").checked,
+        document.getElementById("peça6").checked,
+        document.getElementById("peça7").checked,
+        document.getElementById("peça8").checked,
+    ]
+    let price = [10, 15, 9, 30, 5, 1000, 5000000, 700]
+    let soma = 0
+lista.forEach(item => {
+soma+=item
+}
+);
+if (soma >=2){
+    let price= 0;
+    for (let i = 0; i < lista.length; i++){
+        if (lista[i]){
+            price += prices[i];
+        }
+    }
+    price = price.toFixed(2)
+    alert(`Parabéns pela sua compra ${nome}! O Total da sua compra foi: ${price}`)
+
+    } else {
+        alert("Escolha pelo menos 2 itens")
+    }}
+
+    </script>
+
+</body>
+</html>
